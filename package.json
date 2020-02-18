@@ -1,0 +1,10 @@
+{
+  "name": "furniture-finder",
+  "version": "0.1.0",
+  "description": "Single page application to search and filter furniture products",
+  "main": "index.js",
+  "repository": "https://github.com/rozakbuhari/furniture-finder.git",
+  "author": "Fathurozak Buhari <rozakbuhari@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
