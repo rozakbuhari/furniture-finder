@@ -10,6 +10,7 @@
   "scripts": {
     "dev": "webpack-dev-server -c webpack.dev.config.js --open",
     "build": "webpack",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
