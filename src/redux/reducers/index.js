@@ -1,7 +1,5 @@
 import { combineReducers } from 'redux';
+import products from './products';
+import furnitureStyles from './furnitureStyles';
 
-const products = (state = {}, action) => {
-  return state;
-};
-
-export default combineReducers({ products });
+export default combineReducers({ products, furnitureStyles });
