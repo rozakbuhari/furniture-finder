@@ -45,7 +45,6 @@ const ProductsPage = () => {
 
   return (
     <div>
-      <h2>Product List</h2>
       <ProductFilter
         loading={furnitureStylesLoading}
         furnitureStyles={furnitureStyles}
