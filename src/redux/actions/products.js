@@ -1,4 +1,8 @@
-import { FETCH_PRODUCTS } from '../constants';
+import {
+  FETCH_PRODUCTS,
+  SET_FILTERS_BY_STYLE,
+  SET_FILTERS_BY_TYPE,
+} from '../constants';
 import { success, failed } from '../utils';
 
 export const fetchProducts = () => (dispatch) => {
@@ -26,4 +30,14 @@ export const fetchProductsSuccess = (data) => ({
 export const fetchProductsFailed = (error) => ({
   type: failed(FETCH_PRODUCTS),
   error,
+});
+
+export const setFilterByStyle = (filters = []) => ({
+  type: SET_FILTERS_BY_STYLE,
+  payload: filters,
+});
+
+export const setFilterByType = (filters = []) => ({
+  type: SET_FILTERS_BY_TYPE,
+  payload: filters,
 });
