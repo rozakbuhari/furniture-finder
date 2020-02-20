@@ -14,10 +14,28 @@ const Header = () => {
   return (
     <header
       css={css`
-        padding: 20px 10px;
-        margin: 0;
-        width: 50%;
+        width: 100%;
+        max-width: 1200px;
+        padding: 16px;
+        margin: 0 auto;
+
+        h1 {
+          text-decoration: underline;
+          font-weight: 400;
+
+          strong {
+            font-weight: 700;
+          }
+        }
+
+        form {
+          margin-top: 36px;
+          width: 400px;
+        }
       `}>
+      <h1>
+        Furniture <strong>Finder</strong>
+      </h1>
       <Formik initialValues={{ search: '' }} onSubmit={handleSearch}>
         {({ values, handleChange, handleBlur, handleSubmit }) => (
           <form onSubmit={handleSubmit}>

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import qs from 'qs';
+import Layout from '../../components/Layout';
 import { fetchProducts } from '../../redux/actions/products';
 import {
   getProductsLoading,
@@ -28,13 +29,13 @@ const SearchPage = () => {
   }, [query.s]);
 
   return (
-    <div>
+    <Layout>
       <ProductFilter
         loading={furnitureStylesLoading}
         furnitureStyles={furnitureStyles}
       />
       <ProductList products={products} loading={productsLoading} />
-    </div>
+    </Layout>
   );
 };
 
