@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import Layout from '../../components/Layout';
 import { fetchProducts } from '../../redux/actions/products';
 import {
   getProductsLoading,
@@ -24,13 +25,13 @@ const ProductsPage = () => {
   }, []);
 
   return (
-    <div>
+    <Layout>
       <ProductFilter
         loading={furnitureStylesLoading}
         furnitureStyles={furnitureStyles}
       />
       <ProductList products={products} loading={productsLoading} />
-    </div>
+    </Layout>
   );
 };
 
