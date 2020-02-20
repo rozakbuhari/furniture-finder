@@ -13,6 +13,7 @@ ReactDOM.render(
       styles={css`
         * {
           box-sizing: border-box;
+          color: #333333;
         }
         h1,
         h2,

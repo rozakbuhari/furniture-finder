@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { css } from '@emotion/core';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../redux/actions/products';
 import {
@@ -9,7 +8,6 @@ import {
 import {
   getFurnitureStyles,
   getFurnitureStylesLoading,
-  getFurnitureStylesError,
 } from '../../redux/selectors/furnitureStyles';
 import ProductList from '../../components/ProductList';
 import ProductFilter from '../../components/ProductFilter';
@@ -20,24 +18,6 @@ const ProductsPage = () => {
   const products = useSelector(getProductsByFilter);
   const furnitureStyles = useSelector(getFurnitureStyles);
   const furnitureStylesLoading = useSelector(getFurnitureStylesLoading);
-  const deliveryTypes = [
-    {
-      label: '1 week',
-      value: [0, 8],
-    },
-    {
-      label: '2 week',
-      value: [8, 15],
-    },
-    {
-      label: '1 month',
-      value: [15, 32],
-    },
-    {
-      label: 'more',
-      value: [32, Infinity],
-    },
-  ];
 
   useEffect(() => {
     dispatch(fetchProducts());
@@ -48,7 +28,6 @@ const ProductsPage = () => {
       <ProductFilter
         loading={furnitureStylesLoading}
         furnitureStyles={furnitureStyles}
-        deliveryTypes={deliveryTypes}
       />
       <ProductList products={products} loading={productsLoading} />
     </div>

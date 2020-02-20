@@ -10,14 +10,28 @@ import { css } from '@emotion/core';
 
 const animatedComponents = makeAnimated({ IndicatorSeparator: null });
 
-const ProductFilter = ({
-  furnitureStyles = [],
-  deliveryTypes = [],
-  loading = true,
-}) => {
+const ProductFilter = ({ furnitureStyles = [], loading = true }) => {
   const dispatch = useDispatch();
   const [selectedStyles, setSelectedStyles] = useState([]);
   const [selectedTypes, setSelectedTypes] = useState([]);
+  const deliveryTypes = [
+    {
+      label: '1 week',
+      value: [0, 8],
+    },
+    {
+      label: '2 week',
+      value: [8, 15],
+    },
+    {
+      label: '1 month',
+      value: [15, 32],
+    },
+    {
+      label: 'more',
+      value: [32, Infinity],
+    },
+  ];
 
   const handleByStyleChange = (values) => {
     setSelectedStyles(values || []);
