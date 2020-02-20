@@ -17,7 +17,7 @@ export const fetchProducts = (keyword) => (dispatch) => {
         products = products.filter((p) =>
           String(p.name)
             .toLowerCase()
-            .includes(keyword)
+            .includes(keyword.toLowerCase())
         );
       }
 

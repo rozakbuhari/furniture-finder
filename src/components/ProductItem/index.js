@@ -1,5 +1,14 @@
 import React from 'react';
-import { css } from '@emotion/core';
+import { css, keyframes } from '@emotion/core';
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
 
 const MAX_CHAR = 114;
 
@@ -12,6 +21,7 @@ const ProductItem = ({ product }) => {
         border-radius: 8px;
         padding: 16px;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        animation: ${fadeIn} 1s ease-out both;
 
         p {
           margin-bottom: 16px;
